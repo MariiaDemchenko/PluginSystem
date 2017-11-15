@@ -1,0 +1,23 @@
+﻿@model List<Dps.PluginManager.PluginMeta>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Home</h2>
+
+@{
+    Html.RenderAction("Examinations");
+    Html.RenderAction("Plugins", new { model = Model });
+}            
+
+<button id="applyButton" class="btn btn-default">Apply</button>
+
+<script>
+    $(function() {
+        $('#applyButton').on('click', function() {
+            $('#ExaminationsGrid').dxDataGrid('instance').refresh();
+        });
+    });
+</script>    
+

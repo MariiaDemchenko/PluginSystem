@@ -1,0 +1,70 @@
+﻿<h2>Examinations</h2>
+
+@(Html.DevExtreme().DataGrid()
+          .ShowBorders(true)
+          .ID("ExaminationsGrid")
+          .DataSource(d => d
+          .WebApi()
+          .OnBeforeSend("beforeSend"))
+          .Columns(columns =>
+          {
+              columns.Add().DataField("ExaminationId").Width(130);
+              columns.Add().DataField("Name").Width(130);
+              columns.Add().DataField("Age");
+              columns.Add().DataField("Smoker").Width(100);
+              columns.Add().DataField("Height");
+              columns.Add().DataField("Weight");
+              columns.Add().DataField("Waist");
+              columns.Add().DataField("Glucose");
+              columns.Add().DataField("Cholesterol").Width(110);
+              columns.Add().DataField("SBPla");
+              columns.Add().DataField("SBPra");
+              columns.Add().DataField("SBPll");
+              columns.Add().DataField("SBPrl");
+              columns.Add().DataField("DBPla");
+              columns.Add().DataField("DBPra");
+              columns.Add().DataField("DBPll");
+              columns.Add().DataField("DBPrl");
+              columns.Add().DataField("HeartRate").Width(100);
+              columns.Add().DataField("cfPWV");
+              columns.Add().DataField("baPWV");
+          })
+          .FilterRow(f => f.Visible(true))
+          .HeaderFilter(f => f.Visible(true))
+          .GroupPanel(p => p.Visible(true))
+          .Grouping(g => g.AutoExpandAll(false))
+          .RemoteOperations(false)
+          .Summary(s => s
+          .TotalItems(totalItems =>
+          {
+              totalItems.Add().Column("ExaminationId").SummaryType(SummaryType.Count);
+          })
+          .GroupItems(groupItems =>
+          {
+              groupItems.Add().SummaryType(SummaryType.Count);
+          })
+  )
+)
+
+<script>
+    function beforeSend(operation, settings) {
+        var element = document.getElementById("pluginMetas");
+        var pluginMetas = [];
+        for (var i = 0; i < element.rows.length; i++) {
+            var pluginMeta = {
+                "Name": element.rows[i].cells[1].firstChild.value,
+                "Enabled": element.rows[i].cells[2].firstChild.checked,
+                "Parameter": element.rows[i].cells[3].firstChild.value
+            };
+            pluginMetas[i] = pluginMeta;
+        }
+        settings.type = 'Post';
+        settings.url = '/api/Examinations/Post';
+        settings.data = JSON.stringify(pluginMetas);
+        settings.contentType = "application/json; charset=utf-8";
+        settings.dataType = "json";
+    }
+</script>
+
+
+

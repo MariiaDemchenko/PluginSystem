@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DiagnosticsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Examination">
+          <Key>
+            <PropertyRef Name="ExaminationId" />
+          </Key>
+          <Property Name="ExaminationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Age" Type="int" />
+          <Property Name="IsMale" Type="bit" />
+          <Property Name="Smoker" Type="bit" />
+          <Property Name="Height" Type="int" />
+          <Property Name="Weight" Type="int" />
+          <Property Name="Waist" Type="int" />
+          <Property Name="Glucose" Type="float" />
+          <Property Name="Cholesterol" Type="float" />
+          <Property Name="SBPla" Type="int" />
+          <Property Name="SBPra" Type="int" />
+          <Property Name="SBPll" Type="int" />
+          <Property Name="SBPrl" Type="int" />
+          <Property Name="DBPla" Type="int" />
+          <Property Name="DBPra" Type="int" />
+          <Property Name="DBPll" Type="int" />
+          <Property Name="DBPrl" Type="int" />
+          <Property Name="HeartRate" Type="int" />
+          <Property Name="cfPWV" Type="float" />
+          <Property Name="baPWV" Type="float" />
+        </EntityType>
+        <EntityContainer Name="DiagnosticsModelStoreContainer">
+          <EntitySet Name="Examination" EntityType="Self.Examination" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DiagnosticsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Examination">
+          <Key>
+            <PropertyRef Name="ExaminationId" />
+          </Key>
+          <Property Name="ExaminationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Age" Type="Int32" />
+          <Property Name="IsMale" Type="Boolean" />
+          <Property Name="Smoker" Type="Boolean" />
+          <Property Name="Height" Type="Int32" />
+          <Property Name="Weight" Type="Int32" />
+          <Property Name="Waist" Type="Int32" />
+          <Property Name="Glucose" Type="Double" />
+          <Property Name="Cholesterol" Type="Double" />
+          <Property Name="SBPla" Type="Int32" />
+          <Property Name="SBPra" Type="Int32" />
+          <Property Name="SBPll" Type="Int32" />
+          <Property Name="SBPrl" Type="Int32" />
+          <Property Name="DBPla" Type="Int32" />
+          <Property Name="DBPra" Type="Int32" />
+          <Property Name="DBPll" Type="Int32" />
+          <Property Name="DBPrl" Type="Int32" />
+          <Property Name="HeartRate" Type="Int32" />
+          <Property Name="cfPWV" Type="Double" />
+          <Property Name="baPWV" Type="Double" />
+        </EntityType>
+        <EntityContainer Name="DiagnosticsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Examinations" EntityType="Self.Examination" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DiagnosticsModelStoreContainer" CdmEntityContainer="DiagnosticsEntities">
+          <EntitySetMapping Name="Examinations">
+            <EntityTypeMapping TypeName="DiagnosticsModel.Examination">
+              <MappingFragment StoreEntitySet="Examination">
+                <ScalarProperty Name="ExaminationId" ColumnName="ExaminationId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="IsMale" ColumnName="IsMale" />
+                <ScalarProperty Name="Smoker" ColumnName="Smoker" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Waist" ColumnName="Waist" />
+                <ScalarProperty Name="Glucose" ColumnName="Glucose" />
+                <ScalarProperty Name="Cholesterol" ColumnName="Cholesterol" />
+                <ScalarProperty Name="SBPla" ColumnName="SBPla" />
+                <ScalarProperty Name="SBPra" ColumnName="SBPra" />
+                <ScalarProperty Name="SBPll" ColumnName="SBPll" />
+                <ScalarProperty Name="SBPrl" ColumnName="SBPrl" />
+                <ScalarProperty Name="DBPla" ColumnName="DBPla" />
+                <ScalarProperty Name="DBPra" ColumnName="DBPra" />
+                <ScalarProperty Name="DBPll" ColumnName="DBPll" />
+                <ScalarProperty Name="DBPrl" ColumnName="DBPrl" />
+                <ScalarProperty Name="HeartRate" ColumnName="HeartRate" />
+                <ScalarProperty Name="cfPWV" ColumnName="cfPWV" />
+                <ScalarProperty Name="baPWV" ColumnName="baPWV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

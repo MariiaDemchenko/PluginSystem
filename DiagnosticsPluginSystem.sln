@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{EBA4EA79-B34A-43D5-B582-E9A58DA3ECB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dps.Web", "Dps.Web\Dps.Web.csproj", "{D1D41338-DA9E-4DA3-97AD-0CDA062A93EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dps.Infrastructure", "Dps.Infrastructure\Dps.Infrastructure.csproj", "{8CA4B8EB-2D45-4E04-8D77-CCF53D912364}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dps.PluginManager", "Dps.PluginManager\Dps.PluginManager.csproj", "{CA101729-EE9C-42CE-8C1E-5FF8D1FA5961}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dps.Plugin.Filters.Smoker", "Plugins\Dps.Plugin.Filters.Smoker\Dps.Plugin.Filters.Smoker.csproj", "{AE726348-C3EE-4985-AB76-AD46F549C4DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dps.Plugin.Filters.Age", "Plugins\Dps.Plugin.Filters.Age\Dps.Plugin.Filters.Age.csproj", "{BC216CAD-A3F4-4D61-B002-06118A35FFD0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1D41338-DA9E-4DA3-97AD-0CDA062A93EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1D41338-DA9E-4DA3-97AD-0CDA062A93EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1D41338-DA9E-4DA3-97AD-0CDA062A93EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1D41338-DA9E-4DA3-97AD-0CDA062A93EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CA4B8EB-2D45-4E04-8D77-CCF53D912364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CA4B8EB-2D45-4E04-8D77-CCF53D912364}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CA4B8EB-2D45-4E04-8D77-CCF53D912364}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CA4B8EB-2D45-4E04-8D77-CCF53D912364}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA101729-EE9C-42CE-8C1E-5FF8D1FA5961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA101729-EE9C-42CE-8C1E-5FF8D1FA5961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA101729-EE9C-42CE-8C1E-5FF8D1FA5961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA101729-EE9C-42CE-8C1E-5FF8D1FA5961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE726348-C3EE-4985-AB76-AD46F549C4DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE726348-C3EE-4985-AB76-AD46F549C4DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE726348-C3EE-4985-AB76-AD46F549C4DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE726348-C3EE-4985-AB76-AD46F549C4DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC216CAD-A3F4-4D61-B002-06118A35FFD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC216CAD-A3F4-4D61-B002-06118A35FFD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC216CAD-A3F4-4D61-B002-06118A35FFD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC216CAD-A3F4-4D61-B002-06118A35FFD0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AE726348-C3EE-4985-AB76-AD46F549C4DC} = {EBA4EA79-B34A-43D5-B582-E9A58DA3ECB6}
+		{BC216CAD-A3F4-4D61-B002-06118A35FFD0} = {EBA4EA79-B34A-43D5-B582-E9A58DA3ECB6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {93A7129F-8884-4BBF-90D9-965F79B38E15}
+	EndGlobalSection
+EndGlobal

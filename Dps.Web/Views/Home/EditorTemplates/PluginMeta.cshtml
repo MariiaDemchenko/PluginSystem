@@ -1,0 +1,10 @@
+﻿@model Dps.PluginManager.PluginMeta
+
+<tr>
+    <td>@Html.DisplayFor(m  => m.Name)</td>
+    <td>@Html.HiddenFor(m => m.Name)</td>
+
+    <td>@Html.CheckBoxFor(m => m.Enabled)</td>
+
+    <td>@Html.EditorFor(m => m.Parameter)</td>
+</tr>
